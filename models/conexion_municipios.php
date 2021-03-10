@@ -3,7 +3,7 @@
   {
     private $conexion;
 
-    public function Abrir()
+    public function abrir()
     {
       try
       {
@@ -22,10 +22,48 @@
       $this -> conexion = null;
     }
 
-    public function insertar_municipios(Municipio $municipio)
+    public function insertarMunicipios(Municipio $municipio)
     {
-      $consulta = $this -> conexion -> prepare("INSERT INTO municipios VALUES(null,?)");
+      $consulta = $this -> conexion -> prepare("INSERT INTO municipios VALUES(null, ?)");
       $consulta -> bindParam(1, $municipio -> nombre);
+      $consulta -> execute();
+      return $consulta -> rowCount();
+    }
+    public function obtenerMunicipios()
+    {
+      $consulta = $this -> conexion -> prepare("SELECT * FROM municipios");
+      $consulta -> setFetchMode(PDO:: FETCH_OBJ);
+      $consulta -> execute();
+      return $consulta -> fetchAll();
+    }
+    public function obtenerMunicipiosNombre($nombre)
+    {
+      $consulta = $this -> conexion -> prepare("SELECT * FROM municipios WHERE  nombre = ?");
+      $consulta -> bindParam(1,$nombre);
+      $consulta -> setFetchMode(PDO:: FETCH_OBJ);
+      $consulta -> execute();
+      return $consulta -> fetchAll();
+    }
+    public function obtenerMunicipioId($id)
+    {
+      $consulta = $this -> conexion -> prepare("SELECT * FROM municipios WHERE  id = ?");
+      $consulta -> bindParam(1,$id);
+      $consulta -> setFetchMode(PDO:: FETCH_OBJ);
+      $consulta -> execute();
+      return $consulta -> fetchAll();
+    }
+    public function actualizarMunicipio(Municipio $municipio)
+    {
+      $consulta = $this -> conexion -> prepare("UPDATE municipios SET nombre = ? WHERE id = ?");
+      $consulta -> bindParam(1, $municipio -> nombre);
+      $consulta -> bindParam(2, $municipio -> id);
+      $consulta -> execute();
+      return $consulta -> rowCount();
+    }
+    public function eliminarMunicipio($id)
+    {
+      $consulta = $this -> conexion -> prepare("DELETE FROM municipios WHERE id = ?");
+      $consulta -> bindParam(1, $id);
       $consulta -> execute();
       return $consulta -> rowCount();
     }

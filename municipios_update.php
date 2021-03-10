@@ -9,15 +9,17 @@
     $conexion_municipios -> cerrar();
   }else{
     require_once "models/municipios.php";
-    $municipios = new Municipio();
-    $municipios -> nombre = $_POST["nombre"];
-    $filas = $conexion_municipios -> insertarMunicipios($municipios);
+    $municipio = new Municipio();
+    $municipio -> id = $_POST["id"];
+    $municipio -> nombre = $_POST["nombre"];
+    $filas = $conexion_municipios -> actualizarMunicipio($municipio);
     $conexion_municipios -> cerrar();
     if ($filas > 0) {
-      header("location:municipios_index.php?action=2"); //Municipio se inserto
+      header("location:municipios_index.php?action=4"); //Municipio se actualizo
     }
     else{
-      header("location:municipios_index.php?action=3"); //Municipio no se inserto
+      header("location:municipios_index.php?action=5"); //Municipio no se actualizo
     }
   }
+
 ?>
