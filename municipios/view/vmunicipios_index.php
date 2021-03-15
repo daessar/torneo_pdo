@@ -11,7 +11,7 @@
       <thead class="bg-primary">
         <tr>
           <th scope="col">Id</th>
-          <th scope="col">Nombre</th>
+          <th class="mr-5" scope="col">Nombre</th>
           <th scope="col">Acción</th>
         </tr>
       </thead>

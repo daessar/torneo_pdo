@@ -15,7 +15,7 @@
     <!-- Menu -->
     <nav class="navbar navbar-expand-lg navbar-light bg-primary ps-5 pe-5 mb-3 d-flex flex-column flex-md-row align-items-center  border-bottom shadow-sm">
     <div class="container-fluid d-flex">
-      <a class="navbar-brand fs-4 fw-bold" href="index.php">Torneo PDO ⚽</a>
+      <a class="navbar-brand fs-4 fw-bold" href="../../../index.php">Torneo PDO ⚽ - Municipios</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -27,8 +27,8 @@
               Municipios
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="../../municipios/municipios_create.php">Agregar Municipio</a></li>
-              <li><a class="dropdown-item" href="../../municipios/municipios_index.php">Ver Municipios</a></li>
+              <li><a class="dropdown-item" href="municipios_create.php">Agregar Municipio</a></li>
+              <li><a class="dropdown-item" href="municipios_index.php">Ver Municipios</a></li>
             </ul>
           </li>
 
@@ -53,18 +53,6 @@
               <li><a class="dropdown-item" href="jugadores_index.php">Ver Jugadores</a></li>
             </ul>
           </li>
-
-          <!-- Posiciones -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Posiciones
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="equipo_create.php">Agregar Posiciones</a></li>
-              <li><a class="dropdown-item" href="equipo_index.php">Ver Posiciones</a></li>
-            </ul>
-          </li>
-
         </ul>
       </div>
     </div>
