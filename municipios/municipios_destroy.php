@@ -1,5 +1,5 @@
 <?php 
-  require_once "models/conexion_municipios.php";
+  require_once "../models/conexion_municipios.php";
   $conexion_municipios = new ConexionMunicipios();
   $conexion_municipios -> abrir();
   $filas = $conexion_municipios -> eliminarMunicipio($_GET["id"]);

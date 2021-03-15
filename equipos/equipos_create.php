@@ -2,10 +2,12 @@
   require_once "../models/conexion_municipios.php";
   $conexion_municipios = new ConexionMunicipios();
   $conexion_municipios -> abrir();
-  $municipios = $conexion_municipios -> obtenerMunicipioId($_GET["id"]);
+  $municipios = $conexion_municipios -> obtenerMunicipios();
   $conexion_municipios -> cerrar();
-  $municipio = $municipios[0];
+  
   require_once "../view/partials/vheader.php";
-  require_once "../view/municipios/vmunicipios_editar.php";
+  require_once "../view/equipos/vequipos_create.php";
   require_once "../view/partials/vfooter.php";
+
+
 ?>

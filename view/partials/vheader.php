@@ -27,8 +27,8 @@
               Municipios
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="../../municipios/municipios_create.php">Agregar Municipio</a></li>
-              <li><a class="dropdown-item" href="../../municipios/municipios_index.php">Ver Municipios</a></li>
+              <li><a class="dropdown-item" href="../municipios/municipios_create.php">Agregar Municipio</a></li>
+              <li><a class="dropdown-item" href="../municipios/municipios_index.php">Ver Municipios</a></li>
             </ul>
           </li>
 
@@ -38,8 +38,8 @@
               Equipo
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="equipo_create.php">Agregar Equipo</a></li>
-              <li><a class="dropdown-item" href="equipo_index.php">Ver Equipo</a></li>
+              <li><a class="dropdown-item" href="../equipos/equipos_create.php">Agregar Equipo</a></li>
+              <li><a class="dropdown-item" href="../equipos/equipos_index.php">Ver Equipo</a></li>
             </ul>
           </li>
 
@@ -49,8 +49,8 @@
               Jugadores
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="jugadores_create.php">Agregar Jugadores</a></li>
-              <li><a class="dropdown-item" href="jugadores_index.php">Ver Jugadores</a></li>
+              <li><a class="dropdown-item" href="../jugadores/jugadores_create.php">Agregar Jugadores</a></li>
+              <li><a class="dropdown-item" href="../jugadores/jugadores_index.php">Ver Jugadores</a></li>
             </ul>
           </li>
 

@@ -31,7 +31,7 @@
     }
     public function obtenerMunicipios()
     {
-      $consulta = $this -> conexion -> prepare("SELECT * FROM municipios");
+      $consulta = $this -> conexion -> prepare("SELECT * FROM municipios ORDER BY nombre");
       $consulta -> setFetchMode(PDO:: FETCH_OBJ);
       $consulta -> execute();
       return $consulta -> fetchAll();
