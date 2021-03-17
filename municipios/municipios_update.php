@@ -1,5 +1,5 @@
 <?php 
-  require_once "models/conexion_municipios.php";
+  require_once "../models/conexion_municipios.php";
   $conexion_municipios = new ConexionMunicipios();
   $conexion_municipios -> abrir();
   $municipios = $conexion_municipios -> obtenerMunicipiosNombre($_POST["nombre"]);
@@ -8,7 +8,7 @@
     header("location:municipios_index.php?action=1");
     $conexion_municipios -> cerrar();
   }else{
-    require_once "models/municipios.php";
+    require_once "../models/municipios.php";
     $municipio = new Municipio();
     $municipio -> id = $_POST["id"];
     $municipio -> nombre = $_POST["nombre"];
