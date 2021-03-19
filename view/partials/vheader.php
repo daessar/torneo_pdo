@@ -60,8 +60,8 @@
               Posiciones
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="equipo_create.php">Agregar Posiciones</a></li>
-              <li><a class="dropdown-item" href="equipo_index.php">Ver Posiciones</a></li>
+              <li><a class="dropdown-item" href="../posiciones/posiciones_create.php">Agregar Posiciones</a></li>
+              <li><a class="dropdown-item" href="../posiciones/posiciones_index.php">Ver Posiciones</a></li>
             </ul>
           </li>
 
