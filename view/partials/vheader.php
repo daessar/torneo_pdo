@@ -15,7 +15,7 @@
     <!-- Menu -->
     <nav class="navbar navbar-expand-lg navbar-light bg-primary ps-5 pe-5 mb-3 d-flex flex-column flex-md-row align-items-center  border-bottom shadow-sm">
     <div class="container-fluid d-flex">
-      <a class="navbar-brand fs-4 fw-bold" href="index.php">Torneo PDO ⚽</a>
+      <a class="navbar-brand fs-4 fw-bold" href="../index/index.php">Torneo PDO ⚽</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>

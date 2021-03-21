@@ -9,12 +9,12 @@
     $conexion_jugadores -> cerrar();
   }else{
     require_once "../models/jugadores.php";
-    $jugadores = new Jugador();
-    $jugadores -> documento = $_POST["documento"];
-    $jugadores -> nombre = $_POST["nombre"];
-    $jugadores -> posicion = $_POST["posicion"];
-    $jugadores -> equipo = $_POST["equipo"];
-    $filas = $conexion_jugadores -> insertarJugador($jugadores);
+    $jugador = new Jugador();
+    $jugador -> documento = $_POST["documento"];
+    $jugador -> nombre = $_POST["nombre"];
+    $jugador -> posicion = $_POST["posicion"];
+    $jugador -> equipo = $_POST["equipo"];
+    $filas = $conexion_jugadores -> insertarJugador($jugador);
     $conexion_jugadores -> cerrar();
     if ($filas > 0) {
       header("location:jugadores_index.php?action=2"); //Jugador se inserto

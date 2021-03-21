@@ -2,7 +2,7 @@
   <h3 class="text text-center">Crear Jugadores</h3>
   <hr>
   <div class="d-flex justify-content-center text text-center">
-    <form method="POST" action="jugadores_store.php  ">
+    <form method="POST" action="../jugadores/jugadores_store.php">
       <div class="mb-3">
         <label for="documento" class="form-label">Número del documento</label>
         <input type="number" class="form-control" id="documento" name="documento">

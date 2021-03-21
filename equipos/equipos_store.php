@@ -3,7 +3,7 @@
   $conexion_equipos = new ConexionEquipos();
   $conexion_equipos -> abrir();
   $equipos = $conexion_equipos -> obtenerEquipoNombre($_POST["nombre"]);
-
+  
   if (count($equipos) > 0) {
     header("location:equipos_index.php?action=1"); //Equipo existe
     $conexion_equipos -> cerrar();

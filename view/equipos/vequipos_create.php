@@ -9,7 +9,7 @@
       </div>
       <div class="mb-3">
         <label for="dt" class="form-label">Director Técnico</label>
-        <input type="text" class="form-control" id="nombre" name="dt">
+        <input type="text" class="form-control" id="dt" name="dt">
       </div>
        <div class="mb-3">
         <label for="municipio" class="form-label">Municipio</label>

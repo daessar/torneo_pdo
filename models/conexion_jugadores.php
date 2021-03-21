@@ -23,7 +23,7 @@
     }
     public function insertarJugador(Jugador $jugador)
     {
-      $consulta = $this -> conexion -> prepare("INSERT INTO jugadores VALUES(null, ?,?,?,?)");
+      $consulta = $this -> conexion -> prepare("INSERT INTO jugadores VALUES(null, ?)");
       $consulta -> bindParam(1, $jugador -> documento);
       $consulta -> bindParam(2, $jugador -> nombre);
       $consulta -> bindParam(3, $jugador -> posicion);
@@ -38,6 +38,38 @@
       $consulta -> setFetchMode(PDO:: FETCH_OBJ);
       $consulta -> execute();
       return $consulta -> fetchAll();
+    }
+    public function obtenerJugadores()
+    {
+      $consulta = $this -> conexion -> prepare("SELECT jugadores.*, posiciones.nombre AS posicion_nombre, equipos.nombre as equipo_nombre FROM jugadores INNER JOIN posiciones ON jugadores.posicion = posiciones.id INNER JOIN equipos ON jugadores.equipo = equipos.id ORDER BY nombre");
+      $consulta -> setFetchMode(PDO:: FETCH_OBJ);
+      $consulta -> execute();
+      return $consulta -> fetchAll();
+    }
+    public function obtenerJugadorDocumento($documento)
+    {
+      $consulta = $this -> conexion -> prepare("SELECT * FROM jugadores WHERE  documento = ?");
+      $consulta -> bindParam(1,$documento);
+      $consulta -> setFetchMode(PDO:: FETCH_OBJ);
+      $consulta -> execute();
+      return $consulta -> fetchAll();
+    }
+    public function actualizarJugador(Jugador $jugador)
+    {
+      $consulta = $this -> conexion -> prepare("UPDATE jugadores SET nombre = ?, posicion = ?, equipo = ? WHERE documento = ?");
+      $consulta -> bindParam(1, $jugador -> nombre);
+      $consulta -> bindParam(2, $jugador -> posicion);
+      $consulta -> bindParam(3, $jugador -> equipo);
+      $consulta -> bindParam(4, $jugador -> documento);
+      $consulta -> execute();
+      return $consulta -> rowCount();
+    }
+    public function eliminarJugador($documento)
+    {
+      $consulta = $this -> conexion -> prepare("DELETE FROM jugadores WHERE documento = ?");
+      $consulta -> bindParam(1, $documento);
+      $consulta -> execute();
+      return $consulta -> rowCount();
     }
   }
 ?>
