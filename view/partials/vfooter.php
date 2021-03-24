@@ -1,6 +1,6 @@
 <footer class="footer mt-auto p-2 bg-primary">
 <div class="container">
-  <p class="text-center">Desarrollado por Daniel 🚀</p>
+  <p class="text-center fw-bolder">Development by daessar® 🚀</p>
 </div>
   </footer>
 

@@ -1,7 +1,7 @@
 <section style="min-height: 82vh;">
   <h3 class="text text-center">Crear Equipos</h3>
   <hr>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center text text-center">
     <form method="POST" action="equipos_store.php  ">
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre del equipo</label>

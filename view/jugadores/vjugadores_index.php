@@ -25,8 +25,8 @@
           <td><?= $jugador -> posicion_nombre?></td>
           <td><?= $jugador -> equipo_nombre?></td>
           <td>
-            <a href="jugadores_edit.php?documento=<?= $jugador -> documento?>" class="btn btn-success active" aria-current="page">Actualizar</a>
-            <a href="jugadores_destroy.php?documento=<?= $jugador -> documento?>" class="btn btn-danger active" aria-current="page">Eliminar</a>
+            <a href="jugadores_edit.php?documento=<?= $jugador -> documento?>" class="btn btn-success active" aria-current="page"><i class="fas fa-marker"></i></a>
+            <a href="jugadores_destroy.php?documento=<?= $jugador -> documento?>" class="btn btn-danger active" aria-current="page"><i class="far fa-trash-alt"></i></a>
           </td>
         </tr>
       <?php } ?>

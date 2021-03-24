@@ -21,8 +21,8 @@
           <td><?= $posicion -> id?></td>
           <td><?= $posicion -> nombre?></td>
           <td>
-            <a href="posiciones_edit.php?id=<?= $posicion -> id?>" class="btn btn-success active" aria-current="page">Actualizar</a>
-            <a href="posiciones_destroy.php?id=<?= $posicion -> id?>" class="btn btn-danger active" aria-current="page">Eliminar</a>
+            <a href="posiciones_edit.php?id=<?= $posicion -> id?>" class="btn btn-success active" aria-current="page"><i class="fas fa-marker"></i></a>
+            <a href="posiciones_destroy.php?id=<?= $posicion -> id?>" class="btn btn-danger active" aria-current="page"><i class="far fa-trash-alt"></i></a>
           </td>
         </tr>
       <?php } ?>

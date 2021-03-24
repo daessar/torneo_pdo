@@ -21,8 +21,8 @@
           <td><?= $municipio -> id?></td>
           <td><?= $municipio -> nombre?></td>
           <td>
-            <a href="municipios_editar.php?id=<?= $municipio -> id?>" class="btn btn-success active" aria-current="page">Actualizar</a>
-            <a href="municipios_destroy.php?id=<?= $municipio -> id?>" class="btn btn-danger active" aria-current="page">Eliminar</a>
+            <a href="municipios_editar.php?id=<?= $municipio -> id?>" class="btn btn-success active" aria-current="page"><i class="fas fa-marker"></i></a>
+            <a href="municipios_destroy.php?id=<?= $municipio -> id?>" class="btn btn-danger active" aria-current="page"><i class="far fa-trash-alt"></i></a>
           </td>
         </tr>
       <?php } ?>

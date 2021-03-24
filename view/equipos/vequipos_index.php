@@ -25,8 +25,8 @@
           <td><?= $equipo -> dt?></td>
           <td><?= $equipo -> municipios_nombre?></td>
           <td>
-            <a href="equipos_edit.php?id=<?= $equipo -> id?>" class="btn btn-success active" aria-current="page">Actualizar</a>
-            <a href="equipos_destroy.php?id=<?= $equipo -> id?>" class="btn btn-danger active" aria-current="page">Eliminar</a>
+            <a href="equipos_edit.php?id=<?= $equipo -> id?>" class="btn btn-success active" aria-current="page"><i class="fas fa-marker"></i></a>
+            <a href="equipos_destroy.php?id=<?= $equipo -> id?>" class="btn btn-danger active" aria-current="page"><i class="far fa-trash-alt"></i></a>
           </td>
         </tr>
       <?php } ?>
