@@ -23,7 +23,7 @@
     }
     public function insertarJugador(Jugador $jugador)
     {
-      $consulta = $this -> conexion -> prepare("INSERT INTO jugadores VALUES(null, ?)");
+      $consulta = $this -> conexion -> prepare("INSERT INTO jugadores VALUES(?,?,?,?)");
       $consulta -> bindParam(1, $jugador -> documento);
       $consulta -> bindParam(2, $jugador -> nombre);
       $consulta -> bindParam(3, $jugador -> posicion);
