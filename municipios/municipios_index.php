@@ -36,8 +36,12 @@
   $conexion_municipios -> abrir();
   $municipios = $conexion_municipios -> obtenerMunicipios();
   $conexion_municipios -> cerrar();
-
+  session_start();
+  if (isset($_SESSION["usuario"])) {
   require_once "../view/partials/vheader.php";
   require_once "../view/municipios/vmunicipios_index.php";
   require_once "../view/partials/vfooter.php";
+  }else{
+    header("location:../index.php");
+  }
 ?>

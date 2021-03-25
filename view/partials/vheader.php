@@ -45,17 +45,6 @@
             </ul>
           </li>
 
-          <!-- Jugadores -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Jugadores
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="../jugadores/jugadores_create.php">Agregar Jugadores</a></li>
-              <li><a class="dropdown-item" href="../jugadores/jugadores_index.php">Ver Jugadores</a></li>
-            </ul>
-          </li>
-
           <!-- Posiciones -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -67,6 +56,26 @@
             </ul>
           </li>
 
+          <!-- Jugadores -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Jugadores
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../jugadores/jugadores_create.php">Agregar Jugadores</a></li>
+              <li><a class="dropdown-item" href="../jugadores/jugadores_index.php">Ver Jugadores</a></li>
+            </ul>
+          </li>
+
+          <!-- Usuario -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-user"></i> <?=$_SESSION["usuario"]?>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="../cerrar.php">Cerrar Sesión</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>

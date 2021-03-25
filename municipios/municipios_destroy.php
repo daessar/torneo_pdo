@@ -1,4 +1,6 @@
 <?php 
+  session_start();
+  if (isset($_SESSION["usuario"])) {
   require_once "../models/conexion_municipios.php";
   $conexion_municipios = new ConexionMunicipios();
   $conexion_municipios -> abrir();
@@ -10,4 +12,7 @@
     else{
       header("location:municipios_index.php?action=7"); //Municipio no se elimino
     }
+  }else{
+    header("location:../index.php");
+  }
 ?>
