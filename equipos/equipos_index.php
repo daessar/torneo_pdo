@@ -1,7 +1,7 @@
 <?php 
   session_start();
   if (isset($_SESSION["usuario"])) {
-    if (isset($_GET["action"])) {
+    if (isset($_GET["action"])) { //Se verifica la acción que es enviada desde el formulario
       switch ($_GET["action"]) {
         case 1:
           $clase = "alert alert-danger";

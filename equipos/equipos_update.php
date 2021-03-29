@@ -14,7 +14,7 @@
     $filas = $conexion_equipos -> actualizarEquipo($equipo);
     $conexion_equipos -> cerrar();
     if ($filas > 0) {
-      header("location:equipos_index.php?action=4"); //Equipo se ac/Equipo
+      header("location:equipos_index.php?action=4"); //Equipo se actualizo 
     }else{
       header("location:equipos_index.php?action=5"); //Equipo no se actualizo
     }

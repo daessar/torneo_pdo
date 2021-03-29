@@ -1,13 +1,15 @@
 <?php 
+//Conexión a la base de datos
   class ConexionEquipos
   {
     private $conexion;
-
+    //Se crea el método abrir
     public function abrir()
     {
+      //Se instancia la conexion a traves del constructor de pdo
       try
       {
-        $this -> conexion = new PDO("mysql:host=localhost;dbname=torneo","root","");
+        $this -> conexion = new PDO("mysql:host=localhost;dbname=torneo","root",""); //Se especifica la base de datos a la cual se va a conectar
         $this -> conexion -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return 1;
       }
@@ -24,18 +26,20 @@
 
     public function insertarEquipo(Equipo $equipo)
     {
+      //Se crear una plantilla de la consulta, el valor null es del incrementable(id)
       $consulta = $this -> conexion -> prepare("INSERT INTO equipos VALUES(null, ?,?,?)");
       $consulta -> bindParam(1, $equipo -> nombre);
       $consulta -> bindParam(2, $equipo -> dt);
       $consulta -> bindParam(3, $equipo -> municipio);
       $consulta -> execute();
+      //devolvemos la cantidad de filas afectadas
       return $consulta -> rowCount();
     }
     public function obtenerEquipoNombre($nombre)
     {
       $consulta = $this -> conexion -> prepare("SELECT * FROM equipos WHERE  nombre = ?");
       $consulta -> bindParam(1,$nombre);
-      $consulta -> setFetchMode(PDO:: FETCH_OBJ);
+      $consulta -> setFetchMode(PDO:: FETCH_OBJ); //Se usa para la consulta de datos
       $consulta -> execute();
       return $consulta -> fetchAll();
     }

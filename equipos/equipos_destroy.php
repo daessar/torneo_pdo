@@ -5,7 +5,7 @@
     $conexion_equipos = new Conexionequipos();
     $conexion_equipos -> abrir();
     $filas = $conexion_equipos -> eliminarEquipo($_GET["id"]);
-
+      //Verificamos que el equipo no exista
       if ($filas > 0) {
         header("location:equipos_index.php?action=6"); //Equipo se elimino
       }else{
